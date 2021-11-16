@@ -1,0 +1,45 @@
+.new-tweet {
+  display: flex; 
+  /* flex-direction: column; */
+  align-items: center;
+  }
+ 
+  .compose-tweet {
+  /* font-size: 16px;
+  float: left; */
+  }
+ 
+  form {
+    display: flex; 
+    flex-direction: column;
+    width: 75%; 
+  }
+ 
+  #tweet-text {
+  border-style: hidden;
+  border-bottom: 5px solid  #545149; 
+  background-color: #D1DDEF;
+  resize: none; 
+  font-weight: 600; 
+  line-height: 1;
+  }
+ 
+  .under-tweet-input{
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+ 
+  button {
+    display: flex; 
+    align-items: center;
+    font-family:'Bungee', sans-serif;
+    background-color: #4056A1;
+    color: #FFFFFF;
+    /* margin: 1.5em;  */
+  }
+ 
+  .counter {
+    font-family:'Bungee', sans-serif;
+    float: right; 
+  }

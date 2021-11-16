@@ -18,12 +18,12 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png"); 
 }
 
-.avatar-name{
+/* .avatar-name{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .name {
   display: flex;

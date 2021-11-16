@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -27,11 +28,12 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span id="logo">tweeter</span>
-    <p><strong> Write </strong> a new tweet</p>
-    <!-- <ul class="nav-links">
-      <li><a href= "">word</a></li>
-      <li><a href= "">word</a></li>
-    </ul> -->
+     <div class='right-side-nav'>
+       <p>
+         <span class="bolded">Write</span>
+         <span class="light">a new tweet</span>
+        </p>
+      </div>  
   </nav>
 
   <header>
@@ -41,15 +43,30 @@
       </div>
       <!-- <br> -->
       <div class='name'>
-        <h2><span id ="first-name">Farida</span>
-          <span id ="last-name"> MG </span></h2>
+        <h2>
+        <span id ="first-name">Farida</span>
+        <span id ="last-name"> MG </span>
+      </h2>
       </div>
     </div>
   </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <div>
+    <section class="new-tweet">
+      <div class="compose-tweet">
+        <h2>Compose Tweet</h2>
+      </div>
+      <form action="/tweets" method="POST">
+        <label for="tweet-text"></label>
+        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea></textarea>
+        <div class="under-tweet-input">
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
+    <!-- <div>
       <h1>Header</h1>
       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi, nisi quam, vero quibusdam molestiae,
         veminima earum sit id obcaecati saepe veritatis doloribus! Error quis nisi a ut vel!</p>
@@ -61,7 +78,7 @@
     </div>
     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi, nisi quam, vero quibusdam molestiae,
       veminima earum sit id obcaecati saepe veritatis doloribus! Error quis nisi a ut vel!</p>
-    </div>
+    </div> -->
 
   </main>
 </body>
