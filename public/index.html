@@ -22,6 +22,10 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+  <!-- App JS -->
+ <script type="text/javascript" src="/scripts/client.js"></script>
+ <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
 </head>
 
@@ -62,35 +66,18 @@
       <div class="compose-tweet">
         <h2>Compose Tweet</h2>
       </div>
-      <form action="/tweets" method="POST">
+      <form method="POST" action="/tweets/">
         <label for="tweet-text"></label>
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea></textarea>
         <div class="under-tweet-input">
-          <button type="submit">Tweet</button>
+          <button type="submit" class="tweet-btn">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
-    <!-- <div>
-      <h1>Header</h1>
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi, nisi quam, vero quibusdam molestiae,
-        veminima earum sit id obcaecati saepe veritatis doloribus! Error quis nisi a ut vel!</p>
-    </div>
-    <div>
-      <h2>Header</h2>
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi, nisi quam, vero quibusdam molestiae,
-        veminima earum sit id obcaecati saepe veritatis doloribus! Error quis nisi a ut vel!</p>
-    </div>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi, nisi quam, vero quibusdam molestiae,
-      veminima earum sit id obcaecati saepe veritatis doloribus! Error quis nisi a ut vel!</p>
-    </div> -->
-
   </main>
 </body>
 <footer> 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script scr="/scripts/composer-char-counter.js"></script>
 </footer>
 
 </html>
