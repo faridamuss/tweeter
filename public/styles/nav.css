@@ -1,0 +1,27 @@
+/* CSS style for the nav bar */
+
+nav {
+  display: flex; 
+  justify-content: space-between; 
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+/* .nav-link {
+  margin: 1.5em; 
+} */
+
+nav p {
+  display: flex; 
+  align-items: center;
+  margin: 1.5em;
+}
+
+#logo {
+  display: flex; 
+  align-items: center;
+  font-family:'Bungee', sans-serif;
+  margin: 1.5em; 
+}
