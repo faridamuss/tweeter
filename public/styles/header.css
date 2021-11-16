@@ -1,29 +1,29 @@
-/* Instructions: 
-The header should have a height of 400px and be 100% the width of it's parent container
+/* Instructions: The header should have a height of 400px and be 100% the width of it's parent container
 The avatar should be centered vertically and horizontally (Hint: the justify-content and align-items properties are helpful for centering things if you're using Flexbox.)
 The name should be centered below the avatar
 The background should be a different colour than the nav and the body
 The background-image should be a transparent pattern. Feel free to use this tool to assist: https://www.transparenttextures.com/ */
 
 header {
+  height: 540px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 400px;
-  width: 100%;
+  align-items: center;
+  padding-top: 120px;
   color: #545149;
   /* background-color: lightblue; */
   background-color: #ffffff; 
   background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png"); 
 }
 
-/* .avatar-name{
+.avatar-name{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-} */
+}
 
 .name {
   display: flex;

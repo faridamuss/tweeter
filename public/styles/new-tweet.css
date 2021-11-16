@@ -4,11 +4,11 @@
   align-items: center;
   }
  
-  .compose-tweet {
-  /* font-size: 16px;
-  float: left; */
-  }
- 
+  /* .compose-tweet {
+  font-size: 16px;
+  float: left;
+  } */
+
   form {
     display: flex; 
     flex-direction: column;
@@ -36,7 +36,6 @@
     font-family:'Bungee', sans-serif;
     background-color: #4056A1;
     color: #FFFFFF;
-    /* margin: 1.5em;  */
   }
  
   .counter {
