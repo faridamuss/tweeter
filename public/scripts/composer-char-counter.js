@@ -1,8 +1,8 @@
 $(document).ready(function() {
   $('textarea').keyup(function () {
-    let maxLength = 140;
-      let textLength = maxLength - $(this).val().length;
-      let $output = $('output')
+    const maxLength = 140;
+      const textLength = maxLength - $(this).val().length;
+      const $output = $('output')
       $output.text(textLength);
       if (textLength < 0) {
           $output.addClass('invalid')
