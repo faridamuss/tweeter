@@ -13,10 +13,10 @@ header {
   align-items: center;
   padding-top: 120px;
   color: #545149;
-  /* background-color: lightblue; */
   background-color: #ffffff; 
   background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png"); 
 }
+
 
 .avatar-name{
   display: flex;

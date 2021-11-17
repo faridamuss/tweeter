@@ -1,0 +1,47 @@
+.tweet-history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: .5em;
+
+}
+
+.tweet {
+  width: 75%;
+  margin: 1em;
+  border: 5px solid  #545149; 
+}
+
+.th-header {
+  display: flex; 
+  margin: 1em;
+  width: 90%
+}
+.th-header h3 {
+  font-weight: 300;
+}
+
+.th-header img {
+  max-height: 75px;
+  max-width: 75px; 
+}
+
+.display-tweet {
+  margin: 1em; 
+  border-style: hidden;
+  border-bottom: 5px solid #545149;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.tweet-history footer {
+  margin: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.icons {
+  display: flex;
+  align-items: center;
+}

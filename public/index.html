@@ -7,7 +7,8 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-
+  <script src="https://kit.fontawesome.com/90e4eb8664.js" crossorigin="anonymous"></script>
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +48,7 @@
       </div>  
   </nav>
 
-  <header>
+  <header class="top-header">
     <div class="avatar-name">
       <div class='avatar'>
         <img src="/images/profile-hex.png">
@@ -66,7 +67,6 @@
   <main class="container">
 
     <section class="new-tweet">
-      <div class="compose-tweet">
         <h2>Compose Tweet</h2>
       </div>
       <form method="POST" action="/tweets/">
@@ -78,23 +78,58 @@
         </div>
       </form>
     </section>
-    <section id="tweet-history">
-    <header>
-      <h3>Phoda Jacobs</h3>
-      <img>
-    </header> 
 
-    <article>
+    <section class="tweet-history">
+      <article class="tweet">
+        <header class="th-header">
+         <div class='name-left'>
+          <img src="/images/profile-hex.png">
+          <h3>Phoda Jacobs</h3>
+         </div>
+         <div class='userID'>
+           <p>@MrsJacobs</p>
+         </div>
+    </header> 
+    <div class="display-tweet">
       <p>
         Hello World!
       </p>
-    </article>
-    <p>10 days ago</p>
-    </section>
+    </div>
 
+    <footer>
+      <span class="time-passed">10 days ago</span>
+      <div class='icons'>
+        <i class="fas fa-flag"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="fas fa-heart"></i>
+      </div>
+    </footer>
+  </article>
+
+  <article class='tweet'>
+  <header class = "th-header">
+    <img src="/images/profile-hex.png">
+    <h3>Indiana Jones</h3>
+  </div>
+  <div class='userID'>
+    <p>@MrJones</p>
+  </div>
+  </header>
+  <div class="display-tweet">
+    <p>If you want to be a good archeologist, you gotta get out of the library!</p>
+  </div>
+
+  <footer>
+    <p>10 days ago</p>
+    <div class='icons'>
+      <i class="fas fa-flag"></i>
+      <i class="fas fa-retweet"></i>
+      <i class="fas fa-heart"></i>
+    </div>
+  </footer>
+</article>
+
+    </section>
   </main>
 </body>
-<footer> 
-</footer>
-
 </html>

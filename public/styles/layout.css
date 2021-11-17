@@ -16,7 +16,7 @@ html {
 
 body {
   color: #545149;
-  background-color: #D1DDEF;
+  background-color: #F6F2ED;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -27,7 +27,7 @@ main {
   flex-direction: column;
   margin-left: 5%;
   margin-right: 5%;
-  background-color: #D1DDEF;
+  background-color: #F6F2ED;
 }
 
 /*
