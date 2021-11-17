@@ -11,16 +11,6 @@ nav {
   position: fixed;
 }
 
-/* .nav-link {
-  margin: 1.5em; 
-} */
-
-/* nav p {
-  display: flex; 
-  align-items: center;
-  margin: 1.5em;
-} */
-
 .right-side-nav {
   display: flex; 
   flex-direction: column;
