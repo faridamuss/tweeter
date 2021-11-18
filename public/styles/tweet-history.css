@@ -1,4 +1,4 @@
-#tweet-container {
+#tweets-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +62,7 @@
   font-weight: bold;
 }
 
-#tweet-container footer {
+#tweets-container footer {
   margin: 1em;
   display: flex;
   justify-content: space-between;
@@ -83,3 +83,15 @@
 .icons i:hover {
   color: #c99826;
 }
+
+/* .fa-flag:hover {
+  color: #c99826;
+}
+
+.fa-retweet:hover {
+  color: #c99826;
+}
+
+.fa-heart:hover {
+  color: #c99826;
+} */
