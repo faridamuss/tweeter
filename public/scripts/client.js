@@ -44,10 +44,16 @@ const loadTweets = () => {
 
 $(document).ready(function() {
   loadTweets()
+
   $("#post-tweet").submit(function(event){
     event.preventDefault();
-    console.log("New tweeter!")
+    console.log("New tweeter!") 
+
+    $.ajax("/tweets",{
+      method:'POST',
+      data: $("#post-tweet").serialize(),
+    }) 
   });
-})
+});
 
 
