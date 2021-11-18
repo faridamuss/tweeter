@@ -50,10 +50,9 @@ $(document).ready(function() {
     console.log("New tweeter!") 
 
     $.ajax("/tweets",{
-      method:'POST',
+      method:"POST",
       data: $("#post-tweet").serialize(),
     }) 
   });
 });
-
 
