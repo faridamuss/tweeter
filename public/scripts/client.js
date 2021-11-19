@@ -1,5 +1,6 @@
 const renderTweets = function(tweets) {
-  $('#tweet-container').empty();
+  $('#tweet-text').val('');
+  $('#tweets-container').empty();
   for (let tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $('#tweets-container').prepend($tweet);
@@ -50,11 +51,11 @@ $(document).ready(function() {
 
     const textLength = $(this).children("#tweet-text");
      if (!textLength.val()) {
-       alert("Your Tweet is Empty!");
+       alert("Your tweet is empty!");
        return false;
      }
      if (textLength.val().length > 140) {
-       alert("Your Tweet is too Long!")
+       alert("Your tweet is too long!")
        return false;
      }
 
