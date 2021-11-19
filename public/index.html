@@ -1,134 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-    <script src="https://kit.fontawesome.com/90e4eb8664.js" crossorigin="anonymous"></script>
-    
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
+   <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
+
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap"
+    type="text/css">
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/tweet-history.css" type="text/css"/>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet-history.css" type="text/css" />
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
-    <!--Timeago Library-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+  <!-- javascript files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/90e4eb8664.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script src="/scripts/composer-char-counter.js"></script>
 
-    <!--Character Counter-->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
-   </head>
+</head>
 <body>
-  
-  <!-- Top nav bar (fixed) -->
+
+ <!-- Top nav bar (fixed) -->
   <nav>
     <span id="logo">tweeter</span>
-      <div class='right-side-nav'>
-        <p>
-         <span class="bolded">Write</span>
-         <span class="light">a new tweet</span>
-         <i class ="fas fa-angle-double-down"></i>
-        </p>
-      </div>  
+    <div class='right-side-nav'>
+      <p>
+        <span class="bolded">Write</span>
+        <span class="light">a new tweet!</span>
+      </p>
+      <button class='scroll'>
+        <i class="fas fa-angle-double-down"></i>
+      </button>
+    </div>
   </nav>
 
-  <!-- Header -->
-  <header class="top-header">
+<!-- Header -->
+  <header class='top-header'>
     <div class="avatar-name">
       <div class='avatar'>
         <img src="/images/profile-hex.png">
       </div>
-      <!-- <br> -->
       <div class='name'>
         <h2>
-        <span id="first-name">Farida</span>
-        <span id="last-name"> MG </span>
-      </h2>
+          <span id="first-name">Farida</span>
+          <span id="last-name">MG</span>
+        </h2>
       </div>
     </div>
   </header>
 
-<!-- Page-specific (main) content here -->
-<!-- Create a new tweet -->
-<main class="container">
-  <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-      </div>
-      <form action="/tweets" method="POST">
+  <!-- Create a new tweet -->
+  <main class="container">
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form action="/tweets" method="POST" id="submit-tweet">
         <label for="tweet-text"></label>
-        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea></textarea>
+        <textarea name="text" class="tweet-text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="under-tweet-input">
-          <button type="submit" class="tweet-btn">Tweet</button>
+          <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
-  </section>
+    </section>
+    <section class="tweet-history" id="tweets-container">
+    </section>
+  </main>
 
-  <!-- Posted tweet ONE -->
-<section id="tweets-container">
-   <!-- <article class="tweet">
-      <header class="th-header">
-        <div class="name-left">
-          <img class="th-header img" src="https://i.imgur.com/73hZDYK.png">
-          <h3>Newton</h3>
-        </div>
-        <div id='userID'>
-           <p>@SirIsaac</p>
-        </div>
-      </header> 
-    <div class="display-tweet">
-      <p> If I have seen further it is by standing on the shoulders of giants</p>
-    </div> 
-    <footer class="tweet-footer">
-    <span class="time-passed">10 days ago</span> -->
-      <!-- <div class="icons">
-        <i class="fas fa-flag"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="fas fa-heart"></i>
-      </div>
-    </footer>
-  </article> --> 
-   
-  <!-- Posted tweet TWO -->
-  <!-- <article class='tweet'>
-  <header class ="th-header h3">
-    <div class="name-left">
-    <img class="th-header img" src="https://i.imgur.com/nlhLi3I.png">
-    <h3>Descartes</h3>
-  </div>
-  <div id='userID'>
-    <p>@rd</p>
-  </div>
-  </header>
-  <div class="display-tweet">
-    <p>Je pense, donc je suis</p>
-  </div>
-  <footer>
-    <span class="time-passed">12 days ago</span>
-    <div class="icons">
-      <i class="fas fa-flag"></i>
-      <i class="fas fa-retweet"></i>
-      <i class="fas fa-heart"></i>
-    </div>
-  </footer>
-</article> -->
-</section>
-    </main>
-  </body>
+</body>
+
 </html>
