@@ -1,3 +1,9 @@
+// //makes top nav arrow redirect to tweet box on click
+$('.scroll').click(() => {
+  $('html,body').animate({ scrollTop: 0 }, 1000);
+  $('#tweet-text').focus();
+});
+
 //function to build html for tweets dynamically
 const createTweetElement = function (tweetObj) {
   const $tweet = $("<article class='tweet'>");
