@@ -1,68 +1,101 @@
-const renderTweets = function(tweets) {
-  $('#tweet-text').val('');
-  $('#tweets-container').empty();
-  for (let tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
-    $('#tweets-container').prepend($tweet);
-  }
+//function to build html for tweets dynamically
+const createTweetElement = function (tweetObj) {
+  const $tweet = $("<article class='tweet'>");
+  //tweet header
+  const $header = $("<header class='th-header'>");
+  //header children
+  const $headerD1 = $("<div class='name-left'>");
+  const $avatar = $("<img>").attr("src", tweetObj.user.avatars);
+  const $name = $("<h3>").text(tweetObj.user.name);
+  $headerD1.append($avatar, $name);
+  const $headerD2 = $("<div id='userID'>");
+  const $handle = $("<p>").text(tweetObj.user.handle);
+  $headerD2.append($handle);
+  //append the contents of header
+  $header.append($headerD1, $headerD2);
+  //tweet content
+  const $contentContainer = $("<div class='display-tweet'>");
+  const $contentText = $("<p>").text(tweetObj.content.text);
+  //append tweet text to container
+  $contentContainer.append($contentText);
+  //tweet footer
+  const $footer = $("<footer>")
+  //tweet footer children
+  const timeDelta = moment(tweetObj.created_at).fromNow();
+  const $timeStamp = $("<p>").text(timeDelta);;
+  const $footerD2 = $("<div class='icons'>");
+  const $flag = $("<i class='far fa-flag' id='flag'>");
+  const $retweet = $("<i class='fas fa-retweet' id='retweet'>");
+  const $heart = $("<i class='far fa-heart' id='heart'>");
+  $footerD2.append($flag, $retweet, $heart);
+  //append footer children to footer
+  $footer.append($timeStamp, $footerD2);
+  //add all of the children to the tweet div
+  $tweet.append($header, $contentContainer, $footer);
+  return $tweet;
 };
-  
-function createTweetElement(tweetData) {
-  const $tweet = $(`<article class="tweet">
-  <header class="th-header">
-    <div class="name-left">
-      <img class="th-header img" src=${tweetData.user.avatars} >
-      <h3>${tweetData.user.name}</h3>
-    </div>
-    <div id='userID'>
-       <p>${tweetData.user.handle}</p>
-    </div>
-  </header> 
-<div class="display-tweet">
-  <p>${tweetData.content.text} </p>
-</div> 
-<footer class="tweet-footer">
-<span class="time-passed">${timeago.format(tweetData.created_at)}</span> 
-  <div class="icons">
-    <i class="fas fa-flag"></i>
-    <i class="fas fa-retweet"></i>
-    <i class="fas fa-heart"></i>
-  </div>
-</footer>
-</article>`
- )
- return $tweet;
+
+//loops through all tweets
+const renderTweets = function (tweets) {
+  const $container = $('#tweets-container')
+  $container.empty();
+  tweets.forEach((tweet) => {
+    const tweetNode = createTweetElement(tweet);
+    $container.prepend(tweetNode);
+  });
 }
+
 const loadTweets = () => {
   $.ajax({
-    url:"/tweets", 
-    method:'GET', 
-  })
-  .then((datatweets) => {
-    renderTweets(datatweets); 
-  })
+    url: '/tweets',
+    method: 'GET',
+    dataType: 'json',
+    success: (tweets) => {
+      renderTweets(tweets);
+    },
+    error: (error) => {
+      console.error(error);
+    }
+  });
+};
+
+//function to add custom error message
+const appendError = (message) => {
+  $('#submit-tweet').prepend($("<span class='error'>").text(' ⚠️ ' + message + ' ⚠️').slideDown().delay(3500).hide(500));
 }
 
-$(document).ready(function() {
-  // loadTweets()
-  $("#post-tweet").submit(function(event){
-    event.preventDefault();
-    console.log("New tweeter!") 
+//removes errors to keep multiple errors from popping up with repeated error inducing clicks
+const removeError = () => {
+  $('.error').remove()
+}
 
-    const textLength = $(this).children("#tweet-text");
-     if (!textLength.val()) {
-       alert("Your tweet is empty!");
-       return false;
-     }
-     if (textLength.val().length > 140) {
-       alert("Your tweet is too long!")
-       return false;
-     }
+//resets countdoen to 140 characters
+const resetCounter = () => {
+  $('.counter').text(140);
+}
 
-    $.ajax("/tweets",{
-      method:"POST",
-      data: $("#post-tweet").serialize(),
-    }) 
+//handles submit click and employs helper functions from above
+$(document).ready(function () {
+  loadTweets();
+  //form submit handler
+  const $submitTweet = $('#submit-tweet');
+  $submitTweet.on('submit', function (e) {
+    e.preventDefault();
+    const serializedData = $(this).serialize();
+    //handle errors
+    removeError();
+    if ($('#tweet-text').val() === '' || null) {
+      appendError("You cannot post a blank tweet");
+    } else if ($('#tweet-text').val().length > 140) {
+      appendError("Your tweet is too long!")
+    } else {
+      //post tweets
+      $.post('/tweets', serializedData)
+        .then((response) => {
+          loadTweets();
+          $(this).children('textarea').val('');
+          resetCounter();
+        })
+    }
   });
-  loadTweets()
 });
