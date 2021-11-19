@@ -83,11 +83,13 @@ const resetCounter = () => {
 //handles submit click and employs helper functions from above
 $(document).ready(function() {
   loadTweets();
+  
   //form submit handler
   const $submitTweet = $('#submit-tweet');
   $submitTweet.on('submit', function(e) {
     e.preventDefault();
     const serializedData = $(this).serialize();
+    
     //handle errors
     removeError();
     if ($('#tweet-text').val() === '' || null) {
@@ -95,6 +97,7 @@ $(document).ready(function() {
     } else if ($('#tweet-text').val().length > 140) {
       appendError("Your tweet is too long!");
     } else {
+      
       //post tweets
       $.post('/tweets', serializedData)
         .then((response) => {
