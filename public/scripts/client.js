@@ -1,4 +1,5 @@
 const renderTweets = function(tweets) {
+  $('#tweet-container').empty();
   for (let tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $('#tweets-container').prepend($tweet);
@@ -31,7 +32,6 @@ function createTweetElement(tweetData) {
  )
  return $tweet;
 }
-
 const loadTweets = () => {
   $.ajax({
     url:"/tweets", 
@@ -43,16 +43,25 @@ const loadTweets = () => {
 }
 
 $(document).ready(function() {
-  loadTweets()
-
+  // loadTweets()
   $("#post-tweet").submit(function(event){
     event.preventDefault();
     console.log("New tweeter!") 
+
+    const textLength = $(this).children("#tweet-text");
+     if (!textLength.val()) {
+       alert("Your Tweet is Empty!");
+       return false;
+     }
+     if (textLength.val().length > 140) {
+       alert("Your Tweet is too Long!")
+       return false;
+     }
 
     $.ajax("/tweets",{
       method:"POST",
       data: $("#post-tweet").serialize(),
     }) 
   });
+  loadTweets()
 });
-
