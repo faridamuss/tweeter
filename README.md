@@ -9,10 +9,9 @@ Tweeter is a simple, single-page Twitter clone, built with HTML, CSS, JS, jQuery
 
 !["screenshoot of long tweet displaying error"](https://github.com/faridamoussaeff/tweeter/blob/master/docs/longtweeterror.jpeg)
 
-!["screenshoot of mobile version"](https://github.com/faridamoussaeff/tweeter/blob/master/docs/mobileversion.jpeg)
+!["screenshoot of mobile version"](https://github.com/faridamoussaeff/tweeter/blob/master/docs/mobileversion2.png)
 
-!["screenshoot of tablet version"](https://github.com/faridamoussaeff/tweeter/blob/master/docs/ipadversion.jpeg)
-
+!["screenshoot of tablet version"](https://github.com/faridamoussaeff/tweeter/blob/master/docs/tabletversion2.png)
 
 ## Dependencies
 - Express
