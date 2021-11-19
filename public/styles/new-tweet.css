@@ -1,64 +1,94 @@
 .new-tweet {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1.5em;
-  }
- 
-.new-tweet h2{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 1.5em;
+}
+
+.new-tweet h2 {
   width: 75%;
 }
 
-  form {
-  display: flex; 
+form {
+  display: flex;
   flex-direction: column;
-  width: 75%; 
+  width: 75%;
 }
- 
-  #tweet-text {
-  min-width: 100%;
-  max-width: 100%;
-  margin-top: .3em;
-  border-style: hidden;
-  border-bottom: 5px solid  #545149; 
-  background-color: #F6F2ED;
-  resize: none; 
-  font-weight: 600; 
-  line-height: 1;
-  overflow-y: auto;
-  }
- 
-  .under-tweet-input{
-    display: flex; 
-    justify-content: space-between;
-    margin-top: 5px;
-    padding: 0em 0em 1em;
-  }
- 
-  button {
-    display: flex; 
-    align-items: center;
-    font-family:'Bungee', sans-serif;
-    background-color: #4056A1;
-    color: #F6F2ED;
-    padding: 0.2em 0.5em;
-  }
-  .tweet-btn {
-    border: none !important; 
-    background-color: #4056a1;
-    color: #ffffff;
-    font-family: "Bungee", "sans-serif";
-    padding: 5px 12px;
-    cursor: pointer;
-  }
- 
-  .counter {
-    font-family:'Bungee', sans-serif;
-    float: right; 
+
+.tweet-text {
+border-style: hidden;
+border-bottom: 5px solid  #545149;
+background-color: #D1DDEF;
+resize: none;
+font-weight: 600;
+line-height: 1;
+}
+
+.under-tweet-input{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  font-family:'Bungee', sans-serif;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+.counter {
+  font-family:'Bungee', sans-serif;
+  float: right;
+}
+
+.error {
+  background-color: mediumvioletred;
+  opacity: .75;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 600;
+  border: solid 3px mediumvioletred;
+  border-radius: 5px;
+  font-size: 24px;
+}
+
+/* ++++++++MEDIA QUERY ABOVE 1024PX++++++++ */
+@media (min-width: 1024px) {
+  .new-tweet h2 {
+  font-size: 24px;
+  width: 95%;
+  padding-top: 5%;
   }
 
-  .invalid {
-    color: #FF0000;
-    opacity: .75;
+  form {
+    margin: .5em;
+    width: 95%;
   }
+
+.tweet-text {
+  background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+  background-color: #ffffff;
+  }
+
+.error {  
+  font-size: 22px;
+  }
+}
+
+/* ++++++++MEDIA QUERY BELOW 768PX++++++++ */
+@media (max-width: 768px) {
+ .new-tweet {
+   margin-bottom: 5px;
+ }
+
+ .new-tweet h2 {
+   width: 95%;
+   font-size: inherit;
+ }
+
+ form {
+   width: 95%;
+ }
+}

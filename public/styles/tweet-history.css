@@ -1,4 +1,4 @@
-#tweets-container {
+.tweet-history {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,25 +8,25 @@
 .tweet {
   width: 75%;
   margin: 1em;
-  border: 5px solid  #545149; 
+  border: 5px solid  #545149;
 }
 
-.tweet:hover{
-  box-shadow: 5px 10px #888181
+.tweet:hover {
+  box-shadow: 5px 10px #524848;
 }
 
 .th-header {
-  display: flex;  
+  display: flex;
   justify-content: space-between;
   margin: 1em;
   width: 90%;
 }
 
-.name-left {
+.name-left{
   display: flex;
 }
 
-.name-left h3{
+.name-left h3 {
   margin-left: 5px;
 }
 
@@ -34,18 +34,13 @@
   font-weight: 300;
 }
 
-/* .th-header h3 {
-  max-height: 75px;
-  max-width: 75px; 
-} */
-
 .th-header img {
   max-height: 75px;
   max-width: 75px;
 }
 
 .display-tweet {
-  margin: 1em; 
+  margin: 1em;
   border-style: hidden;
   border-bottom: 5px solid #545149;
   font-weight: 300;
@@ -62,36 +57,94 @@
   font-weight: bold;
 }
 
-#tweets-container footer {
+#heart:hover {
+  color: goldenrod;
+}
+
+#retweet:hover {
+  color: goldenrod;
+}
+
+#flag:hover {
+  color: goldenrod;
+}
+
+.tweet-history footer {
   margin: 1em;
   display: flex;
   justify-content: space-between;
 }
 
-.time-passed {
-  font-size: 1.1rem; 
-}
-
 .icons {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  width: 6vw;
-  margin-right: .1em;
+  width: 10vw;
+  margin-right: .5em;
 }
 
-.icons i:hover {
-  color: #c99826;
+/* ++++++++MEDIA QUERY ABOVE 1024PX++++++++ */
+@media (min-width: 1024px) {
+  .tweet-history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .5em;
+  }
+
+  .tweet {
+    width: 95%;
+  }
+
+.name-left h3 {
+  margin-left: 10px;
+  }
 }
 
-/* .fa-flag:hover {
-  color: #c99826;
-}
+/* ++++++++MEDIA QUERY BELOW 768PX++++++++ */
+@media (max-width: 768px) {
+  .tweet {
+    width: 95%
+  }
 
-.fa-retweet:hover {
-  color: #c99826;
-}
+  #heart {
+    margin: 4px;
+  }
 
-.fa-heart:hover {
-  color: #c99826;
-} */
+  #retweet {
+    margin: 4px;
+  }
+
+  #flag {
+    margin: 4px;
+  }
+
+  .icons {
+    width: auto;
+  }
+
+  .tweet p {
+    margin: .5em;
+  }
+
+  .tweet footer {
+    margin: .5em;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  .th-header {
+    margin: .5em;
+    flex-wrap: wrap;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  .display-tweet {
+    margin: 5px;
+  }
+}

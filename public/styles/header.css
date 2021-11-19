@@ -1,32 +1,70 @@
-header {
-  height: 540px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 120px;
-  color: #545149;
-  background-color: #ffffff; 
-  background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png"); 
-}
+.top-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+    height: 540px;
+    width: 100%;
+    color: #545149;
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+  }
 
-/* .avatar-name{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-} */
+  .name {
+    display: flex;
+    justify-content: center;
+  }
 
-.name {
-  display: flex;
-  justify-content: center;
-}
+  #first-name {
+    font-weight: 700;
+  }
 
-#first-name {
-  font-weight: 700;
-}
+  #last-name {
+    font-weight: 300;
+  }
 
-#last-name {
-  font-weight: 300;
-}
+  /* ++++++++MEDIA QUERY ABOVE 1024PX++++++++ */
+  @media (min-width: 1024px) {
+    .top-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 25vh;
+      margin-left: 5%;
+      margin-right: 2.5%;
+      width: 25%;
+      height: 80vh;
+      color: #545149;
+    }
+
+    .avatar-name {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .name h2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #first-name {
+      font-size: 32px;
+      margin: 0px 2px 0px 2px;
+    }
+
+    #last-name {
+      font-size: 32px;
+      margin: 0px 2px 0px 2px;
+    }
+  }
+
+  /* ++++++++MEDIA QUERY BELOW 768PX++++++++ */
+  @media (max-width: 768px) {
+   .top-header {
+    padding-top: 140px;
+    height: 500px;
+   }
+  }
