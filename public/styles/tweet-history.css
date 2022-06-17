@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: .5em;
+  margin-top: 1rem;
 }
 
 .tweet {
-  width: 75%;
+  width: 80%;
   margin: 1em;
-  border: 5px solid  #545149;
+  border: 5px solid #545149;
 }
 
 .tweet:hover {
@@ -22,12 +22,12 @@
   width: 90%;
 }
 
-.name-left{
+.name-left {
   display: flex;
 }
 
 .name-left h3 {
-  margin-left: 5px;
+  margin-left: 2rem;
 }
 
 .th-header h3 {
@@ -35,8 +35,8 @@
 }
 
 .th-header img {
-  max-height: 75px;
-  max-width: 75px;
+  max-height: 4rem;
+  max-width: 4rem;
 }
 
 .display-tweet {
@@ -49,7 +49,7 @@
 }
 
 #userID {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .tweet:hover #userID {
@@ -79,8 +79,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 10vw;
-  margin-right: .5em;
+  width: 8vw;
+  margin-right: 1rem;
 }
 
 /* ++++++++MEDIA QUERY ABOVE 1024PX++++++++ */
@@ -89,34 +89,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: .5em;
+    margin-top: 1rem;
   }
 
   .tweet {
     width: 95%;
   }
 
-.name-left h3 {
-  margin-left: 10px;
+  .name-left h3 {
+    margin-left: 0.4rem;
+    margin-top: 0.5rem;
   }
 }
 
 /* ++++++++MEDIA QUERY BELOW 768PX++++++++ */
 @media (max-width: 768px) {
   .tweet {
-    width: 95%
+    width: 95%;
   }
 
   #heart {
-    margin: 4px;
+    margin: 3px;
   }
 
   #retweet {
-    margin: 4px;
+    margin: 3px;
   }
 
   #flag {
-    margin: 4px;
+    margin: 3px;
   }
 
   .icons {
@@ -124,11 +125,11 @@
   }
 
   .tweet p {
-    margin: .5em;
+    margin: 0.5em;
   }
 
   .tweet footer {
-    margin: .5em;
+    margin: 0.3em;
   }
 
   footer p {
@@ -136,7 +137,7 @@
   }
 
   .th-header {
-    margin: .5em;
+    margin: 0.5em;
     flex-wrap: wrap;
   }
 
@@ -146,5 +147,15 @@
 
   .display-tweet {
     margin: 5px;
+  }
+  .th-header img {
+    max-height: 3rem;
+    max-width: 3rem;
+    margin-top: 1rem;
+  }
+  .th-header h3 {
+    font-weight: 300;
+    font-size: 2rem;
+    margin-left: 0.3rem;
   }
 }

@@ -1,70 +1,92 @@
 .top-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7rem;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 100%;
+  width: 100%;
+  /* color: #545149;*/
+  /* background-color: DFF6FF */
+  background-image: url('https://www.transparenttextures.com/patterns/stacked-circles.png');
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+#first-name {
+  font-weight: 700;
+}
+
+#last-name {
+  font-weight: 300;
+}
+
+/* ++++++++MEDIA QUERY ABOVE 1024PX++++++++ */
+@media (min-width: 1024px) {
+  .top-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20vh;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 25%;
+    height: 75vh;
+    color: #545149;
+  }
+
+  .avatar-name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: 3rem;
+  }
+
+  #first-name {
+    font-size: 32px;
+    margin: 0px 2px 0px 2px;
+  }
+
+  #last-name {
+    font-size: 32px;
+    margin: 0px 2px 0px 2px;
+  }
+}
+
+/* ++++++++MEDIA QUERY BELOW 768PX++++++++ */
+@media (max-width: 768px) {
+  .top-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 120px;
-    height: 540px;
+    padding-top: 7rem;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 100%;
     width: 100%;
-    color: #545149;
-    background-color: #ffffff;
-    background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+    /* color: #545149;*/
+    /* background-color: DFF6FF */
+    background-image: url('https://www.transparenttextures.com/patterns/stacked-circles.png');
   }
 
-  .name {
+  .name h2 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin-top: 1rem;
+    font-size: 2rem;
   }
-
-  #first-name {
-    font-weight: 700;
-  }
-
-  #last-name {
-    font-weight: 300;
-  }
-
-  /* ++++++++MEDIA QUERY ABOVE 1024PX++++++++ */
-  @media (min-width: 1024px) {
-    .top-header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 25vh;
-      margin-left: 5%;
-      margin-right: 2.5%;
-      width: 25%;
-      height: 80vh;
-      color: #545149;
-    }
-
-    .avatar-name {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .name h2 {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    #first-name {
-      font-size: 32px;
-      margin: 0px 2px 0px 2px;
-    }
-
-    #last-name {
-      font-size: 32px;
-      margin: 0px 2px 0px 2px;
-    }
-  }
-
-  /* ++++++++MEDIA QUERY BELOW 768PX++++++++ */
-  @media (max-width: 768px) {
-   .top-header {
-    padding-top: 140px;
-    height: 500px;
-   }
-  }
+}

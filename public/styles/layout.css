@@ -2,23 +2,30 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
   color: #545149;
-  background-color: #D1DDEF;
-  font-size: 24px;
+  background-color: #f1f2f6;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-stripes-light.png');
+  font-size: 2rem;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  margin-left: 5%;
-  margin-right: 5%;
-  background-color: #D1DDEF;
+  background-color: #f1f2f6;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-stripes-light.png');
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding-top: 25vh;
 }
 
 /* ++++++++MEDIA QUERY ABOVE 1024PX++++++++ */
@@ -26,18 +33,46 @@ main {
   body {
     display: flex;
     color: #545149;
-    background-color: #ffffff;
-    background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+    background-color: #f1f2f6;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-stripes-light.png');
     font-size: 24px;
     font-family: 'Source Sans Pro', sans-serif;
   }
 
   main {
-    margin-left: 2.5%;
-    margin-right: 5%;
-    padding-top: 15vh;
-    background-color: #ffffff;
-    background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 25vh;
+    background-color: #f1f2f6;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-stripes-light.png');
     width: 60%;
+  }
+}
+
+/* ++++++++MEDIA QUERY ABOVE 768PX++++++++ */
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    padding-top: 5vh;
+    color: #545149;
+    background-color: #f1f2f6;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-stripes-light.png');
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  main {
+    display: flex;
+    color: #545149;
+    background-color: #f1f2f6;
+    background-image: url(https://www.transparenttextures.com/patterns/dark-stripes-light.png);
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-top: 10vh;
   }
 }
