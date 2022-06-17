@@ -62,3 +62,33 @@ nav {
     font-size: 28px;
   }
 }
+
+/* ++++++++MEDIA QUERY FOR 414PX (XR)++++++++ */
+@media (max-width: 414px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 7rem;
+    background-color: #4056a1;
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    align-items: baseline;
+  }
+
+  /* .right-side-nav {
+    margin: 0.25em 0.75em 0.25em 0.25em;
+  }
+
+  #logo {
+    margin: 0.25em 0.25em 0.25em 0.75em;
+  }
+
+  nav span {
+    font-size: 28px;
+  } */
+}

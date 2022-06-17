@@ -53,12 +53,16 @@ main {
 @media (max-width: 768px) {
   body {
     display: flex;
-    padding-top: 5vh;
     color: #545149;
     background-color: #f1f2f6;
     background-image: url('https://www.transparenttextures.com/patterns/dark-stripes-light.png');
-    font-size: 24px;
+    font-size: 2rem;
     font-family: 'Source Sans Pro', sans-serif;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   main {
