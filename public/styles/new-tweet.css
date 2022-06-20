@@ -54,12 +54,12 @@ button {
 }
 
 .error {
-  background-color: #ff6348;
+  background-color: #e8630a;
   opacity: 0.75;
   text-align: center;
   color: #ffffff;
   font-weight: 900;
-  border: 6px #ff6348;
+  border: 6px #fbcb0a;
   border-radius: 10px;
   font-size: 3.7rem;
   height: 2.5rem;
@@ -71,7 +71,6 @@ button {
     font-size: 2rem;
     width: 95%;
     padding-top: 1%;
-    
   }
 
   form {
@@ -85,7 +84,15 @@ button {
   }
 
   .error {
-    font-size: 22px;
+    background-color: #e8630a;
+    opacity: 0.75;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 900;
+    border: 6px #fbcb0a;
+    border-radius: 10px;
+    font-size: 2rem;
+    height: 2.5rem;
   }
 }
 
@@ -109,5 +116,16 @@ button {
     font-size: 1.6rem;
     line-height: 1.2;
     padding-top: 0.4rem;
+  }
+  .error {
+    background-color: #e8630a;
+    opacity: 0.75;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 900;
+    border: 6px #fbcb0a;
+    border-radius: 10px;
+    font-size: 1rem;
+    height: 1.5rem;
   }
 }
