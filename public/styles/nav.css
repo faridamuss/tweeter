@@ -5,7 +5,7 @@ nav {
   height: 120px;
   background-color: #4056a1;
   color: #ffffff;
-  position: fixed;
+  position: absolute;
   width: 100%;
 }
 
@@ -37,7 +37,7 @@ nav {
 }
 .scroll {
   border: none;
-  color: mediumvioletred;
+  color: goldenrod;
 }
 
 /* ++++++++MEDIA QUERY ABOVE 1024PX++++++++ */
@@ -45,6 +45,8 @@ nav {
   nav {
     padding-left: 2vw;
     padding-right: 2vw;
+    padding-top: 1vw;
+    position: absolute;
   }
 }
 
@@ -67,28 +69,33 @@ nav {
 @media (max-width: 414px) {
   nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-family: 'Source Sans Pro', sans-serif;
     height: 7rem;
     background-color: #4056a1;
     color: #ffffff;
     position: fixed;
     width: 100%;
-    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/* ++++++++MEDIA QUERY FOR 820PX (XR)++++++++ */
+@media (max-width: 820px) {
+  body {
+    display: flex;
+    color: #545149;
+    background-color: #f1f2f6;
+    background-image: url(https://www.transparenttextures.com/patterns/dark-stripes-light.png);
+    font-size: 2rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    flex-direction: column;
     flex-wrap: nowrap;
-    align-content: space-between;
-    align-items: baseline;
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: center;
   }
-
-  /* .right-side-nav {
-    margin: 0.25em 0.75em 0.25em 0.25em;
-  }
-
-  #logo {
-    margin: 0.25em 0.25em 0.25em 0.75em;
-  }
-
-  nav span {
-    font-size: 28px;
-  } */
 }

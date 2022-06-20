@@ -67,7 +67,7 @@ const loadTweets = () => {
 
 //function to add custom error message
 const appendError = (message) => {
-  $('#submit-tweet').prepend($("<span class='error'>").text(' ⚠️ ' + message + ' ⚠️').slideDown().delay(3500).hide(500));
+  $('#submit-tweet').prepend($("<span class='error'>").text('⚠️' + message + '⚠️').slideDown().delay(3500).hide(500));
 };
 
 //removes errors to keep multiple errors from popping up with repeated error inducing clicks

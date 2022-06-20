@@ -31,14 +31,17 @@
   .top-header {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 20vh;
-    margin-left: 3%;
-    margin-right: 3%;
-    width: 25%;
-    height: 75vh;
+    padding-top: 18vh;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 30%;
     color: #545149;
+    align-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-image: url('https://www.transparenttextures.com/patterns/washi.png');
+    justify-content: space-evenly;
+    background-color: lightblue;
   }
 
   .avatar-name {

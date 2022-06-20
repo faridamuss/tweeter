@@ -20,16 +20,16 @@ main {
   display: flex;
   flex-direction: column;
   background-color: #f1f2f6;
-  background-image: url('https://www.transparenttextures.com/patterns/dark-stripes-light.png');
+  background-image: url(https://www.transparenttextures.com/patterns/dark-stripes-light.png);
   flex-wrap: wrap;
   align-content: stretch;
   justify-content: space-evenly;
   align-items: stretch;
-  padding-top: 25vh;
+  padding-top: 1vh;
 }
 
 /* ++++++++MEDIA QUERY ABOVE 1024PX++++++++ */
-@media (min-width: 1024px) {
+@media (min-width: 1021px) {
   body {
     display: flex;
     color: #545149;
@@ -42,14 +42,14 @@ main {
   main {
     margin-left: 2%;
     margin-right: 2%;
-    padding-top: 25vh;
+    padding-top: 35vh;
     background-color: #f1f2f6;
-    background-image: url('https://www.transparenttextures.com/patterns/dark-stripes-light.png');
+    background-image: url(https://www.transparenttextures.com/patterns/dark-stripes-light.png);
     width: 60%;
   }
 }
 
-/* ++++++++MEDIA QUERY ABOVE 768PX++++++++ */
+/* ++++++++MEDIA QUERY 768PX++++++++ */
 @media (max-width: 768px) {
   body {
     display: flex;
@@ -67,16 +67,42 @@ main {
 
   main {
     display: flex;
-    color: #545149;
+    flex-direction: column;
     background-color: #f1f2f6;
     background-image: url(https://www.transparenttextures.com/patterns/dark-stripes-light.png);
-    font-size: 18px;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding-top: 1vh;
+  }
+}
+
+/* ++++++++MEDIA QUERY 768PX++++++++ */
+@media (max-width: 820px) {
+  body {
+    display: flex;
+    color: #545149;
+    background-color: #f1f2f6;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-stripes-light.png');
+    font-size: 2rem;
     font-family: 'Source Sans Pro', sans-serif;
     flex-direction: column;
-    align-content: space-around;
-    justify-content: space-evenly;
-    align-items: center;
     flex-wrap: nowrap;
-    padding-top: 10vh;
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f2f6;
+    background-image: url(https://www.transparenttextures.com/patterns/dark-stripes-light.png);
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: stretch;
+    padding-top: 1vh;
   }
 }
