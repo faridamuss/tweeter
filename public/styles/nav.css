@@ -46,7 +46,9 @@ nav {
     padding-left: 2vw;
     padding-right: 2vw;
     padding-top: 0.2vw;
-    position: absolute;
+    position: fixed;
+    width: 100%;
+    height: 100px;
   }
 }
 
