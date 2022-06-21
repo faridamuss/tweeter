@@ -9,7 +9,6 @@ on tablet or mobile device
 ## Final Product
 
 !["screenshoot of the main page"](https://github.com/faridamoussaeff/tweeter/blob/master/docs/tweeter.gif)
-tablet
 
 ## Dependencies
 
