@@ -4,7 +4,8 @@ Tweeter is a simple, single-page Twitter clone, built with HTML, CSS, JS,
 jQuery, AJAX, as well as Node and Express. Tweeter is a desktop, tablet and
 mobile friendly app. This project is from Lighthouse Labs, designed for students
 to improve their front-end skills. Tweeter is a responsive app designed to work
-on tablet or mobile device
+on tablet or mobile device. You can check out the final product here:
+tweeter-faridamg.herokuapp.com/ Topics
 
 ## Final Product
 
@@ -13,10 +14,10 @@ on tablet or mobile device
 ## Dependencies
 
 ```
-    "body-parser": "^1.19.0",
-    "chance": "^1.1.8",
-    "express": "^4.13.4",
-    "git": "^0.1.5",
-    "md5": "^2.1.0",
-    "timeago.js": "^4.0.2"
+  "body-parser": "^1.19.0",
+  "chance": "^1.1.8",
+  "express": "^4.13.4",
+  "git": "^0.1.5",
+  "md5": "^2.1.0",
+  "timeago.js": "^4.0.2"
 ```
