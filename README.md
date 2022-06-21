@@ -5,7 +5,7 @@ jQuery, AJAX, as well as Node and Express. Tweeter is a desktop, tablet and
 mobile friendly app. This project is from Lighthouse Labs, designed for students
 to improve their front-end skills. Tweeter is a responsive app designed to work
 on tablet or mobile device. You can check out the final product here:
-tweeter-faridamg.herokuapp.com/ Topics
+[tweeter-faridamg.herokuapp.com](tweeter-faridamg.herokuapp.com)
 
 ## Final Product
 
